@@ -1,5 +1,6 @@
 let start=document.getElementById('start')
 let stop=document.getElementById('stop')
+//creating random color
 const randomColor=function(){
 const hex = '0123456789ABCDEF'
 let color='#';
@@ -11,18 +12,15 @@ return color
 let changer=()=>{
     document.body.style.backgroundColor=randomColor()
 }
+//start event
 let intStart;
 start.addEventListener('click',function(){
-    
     clearInterval(intStart); //clear previous interval
     intStart=setInterval(changer,1000)
-  
 })
-
+//stop event
 stop.addEventListener('click',function(){
     clearInterval(intStart);
-
-
     console.log('stop');
 })
 
